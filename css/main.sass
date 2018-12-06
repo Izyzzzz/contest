@@ -1,0 +1,67 @@
+body
+	font-family: 'Roboto', sans-serif;
+.item-section
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	@media only screen and (max-width : 998px)
+		grid-template-columns:  1fr
+		grid-template-rows: repeat(2, 1fr)
+	.item-left
+		display: grid
+		justify-items: center
+		align-items: center
+		background-color: #fff
+		border-right: 1px solid #f0f0f0
+		padding: 15px
+		@media only screen and (max-width : 998px)
+			border-right: none
+			border-bottom: 1px solid #f0f0f0
+		img
+			display: block
+			width: 100%
+
+	.item-right
+		padding: 15px
+		.item-top
+			.category, .title
+				height: 120px
+				input[type=radio]
+					position: absolute
+					visibility: hidden
+					display: none
+				label
+					color: #999999
+					display: inline-block
+					cursor: pointer
+					padding: 5px 15px
+					background-color: #FFF
+					margin: 5px
+					font-size: 14px
+					border-radius: 25px
+					border: 1px solid #333333
+				input[type=radio]:checked + label
+					background-color: #333333
+					color: #fff
+			.descr
+				padding-top: 15px
+				height: 100px
+		.item-bottom
+			display: grid
+			grid-template-columns: 100px 100px
+			justify-content: center
+			align-items: center
+			font-weight: bold
+			background: #fef2b8
+			.price-title
+				display: grid
+				grid-template-rows: 50px
+				font-size: 21px
+				justify-items: center
+				align-items: center
+			.price
+				display: grid
+				grid-template-rows: 50px
+				font-size: 18px
+				color: #f3294d
+				justify-items: center
+				align-items: center
